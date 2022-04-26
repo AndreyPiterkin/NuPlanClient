@@ -1,0 +1,23 @@
+.space {
+  margin-top: 2em;
+}
+
+.panel-head {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: rgb(227, 227, 227);
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  color:inherit
+}
+
+.plan-table {
+  width: 50%;
+  margin: 0 auto;
+}
