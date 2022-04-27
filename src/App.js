@@ -10,15 +10,13 @@ import useToken from './useToken';
 import PlanManager from './scripts/planManager';
 import PlanScripts from './scripts/planScript';
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import "./App.css";
 
 function App() {
 
-  
   const { token, setToken } = useToken();
   const [plans, setPlans] = React.useState([]);
-
   const pm = new PlanManager(setPlans);
 
   React.useEffect(() => {
@@ -33,7 +31,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard plans={plans} planMan={pm} addPlan={PlanScripts.createPlan}/>} />
         <Route path="/plan" element={<Plan/>} />
         <Route path="/signup" element={<Signup/>} />
-        <Route path="/" element={<Login setToken={setToken}/>} />
+        <Route path="/" element={token? <Navigate to="/dashboard"/> : <Login setToken={setToken}/>} />
       </Routes>
     </BrowserRouter>
   );

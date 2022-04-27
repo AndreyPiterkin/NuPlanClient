@@ -1,3 +1,12 @@
 .table-row {
   height: 41px;
 }
+
+.prereq {
+  outline: thin solid;
+  outline-color: red;
+}
+
+.std {
+  outline: none;
+}

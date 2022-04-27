@@ -8,6 +8,11 @@
   border: lightblue solid 8px;
 }
 
+.add-button {
+  min-width: 150px;
+  width: 15%;
+}
+
 .rowName {
   width: 30%;
 }
@@ -43,6 +48,4 @@
   width: 50%;
   margin: 0 auto;
 }
-
-
 
